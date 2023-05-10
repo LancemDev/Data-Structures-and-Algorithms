@@ -1,15 +1,14 @@
 import java.util.*;
 
-public class factorial2
-{
-    public static void main(String []args){
+public class factorial_using_for_loop {
+    public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter the number: ");
-            int num=scanner.nextInt();
-            int i=1, fact=1;
-            while(i<=num){
+            int num = scanner.nextInt();
+            int fact=1;
+
+            for(int i=1; i<=num; i++){
                 fact=fact*i;
-                i++;
             }
             System.out.println("Factorial of the number: " + fact);
         }
