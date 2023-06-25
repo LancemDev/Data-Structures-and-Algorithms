@@ -1,13 +1,17 @@
 package JNI;
 
-class HelloJNI{
+public class HelloJNI {
+    // Native method declaration
+    public native void sayHello();
+    
     static {
+        // Load the native library when the class is loaded
         System.loadLibrary("HelloJNI");
     }
-     
-    private native void sayHello();
-     
-    public static void main(String[] args){
-        new HelloJNI().sayHello();
+    
+    public static void main(String[] args) {
+        // Create an instance of HelloJNI and call the native method
+        HelloJNI helloJNI = new HelloJNI();
+        helloJNI.sayHello();
     }
 }
